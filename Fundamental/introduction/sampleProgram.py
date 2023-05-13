@@ -19,7 +19,6 @@ def repos_with_most_star(languages, sort="stars", order="desc"):
     params = {"q": query, "sort": sort, "order": order}
 
     response = requests.get(GITHUB_API_URL, params=params)
-    print("response:", response)
     status_code = response.status_code
 
     if status_code != 200:
